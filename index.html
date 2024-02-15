@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Konversi Suhu</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div class="nav-item"><a href="#home">Home</a></div>
+        <div class="nav-item"><a href="#conversion">Konversi</a></div>
+        <div class="nav-item"><a href="#formula">Rumus Konversi</a></div>
+      </div>
+    </div>
+    <section id="conversion"></section>
+    <div class="container">
+      <h1>
+        <i class="fas fa-thermometer-half thermometer-icon"></i> Konversi Suhu
+      </h1>
+      <p id="paragraf-1">
+        Masukkan suhu derajat Celcius (°C) ke kotak di bawah, lalu klik tombol
+        Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F).
+      </p>
+      <form name="form-konversi">
+        <table class="konversi">
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <label for="celcius">Celcius (°C):</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  id="angka_input"
+                  class="intext"
+                  autofocus
+                  tabindex="1"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button
+                  type="button"
+                  title="Konversi"
+                  class="btn"
+                  tabindex="2"
+                  onclick="konversi()"
+                >
+                  Konversi
+                </button>
+                <button
+                  type="reset"
+                  title="Reset"
+                  class="btn"
+                  tabindex="3"
+                  onclick="reset()"
+                >
+                  Reset
+                </button>
+                <button
+                  type="button"
+                  title="Reverse"
+                  class="btn"
+                  tabindex="4"
+                  onclick="toggleKonversi()"
+                >
+                  Reverse
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="fahrenheit">Fahrenheit (°F):</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <textarea
+                  rows="1"
+                  id="output"
+                  class="outtext"
+                  readonly
+                  tabindex="5"
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">Cara Kalkulasi:</td>
+            </tr>
+            <tr>
+              <td>
+                <textarea
+                  rows="1"
+                  id="output_kalkulasi"
+                  class="outtext"
+                  readonly
+                  tabindex="5"
+                ></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <hr />
+      <section id="formula"></section>
+      <h3>
+        <label for="h3"
+          >Cara Konversi dari Celcius (°C) ke Fahrenheit (°F)</label
+        >
+      </h3>
+      <p id="paragraf-2">
+        Suhu dalam derajat Fahrenheit (°F) sama dengan suhu dalam derajat
+        Celcius (°C) kali 9/5 tambah 32. Sedangkan suhu dalam derajat Celcius
+        (°C) dapat dikonversi ke Fahrenheit (°F) dengan cara mengurangkan 32 dan
+        mengalikan 5/9.
+      </p>
+      <p id="paragraf-3">
+        <label for="paragraf-3">Suhu °F = (Suhu °C x 9/5) + 32</label>
+      </p>
+      <p id="paragraf-4">
+        <label for="paragraf-4">Suhu °C = (Suhu °F - 32) x 5/9</label>
+      </p>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
